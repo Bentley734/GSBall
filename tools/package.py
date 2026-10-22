@@ -8,7 +8,7 @@ mod = Path(__file__).resolve().parents[1]
 manifest = json.loads((mod / 'manifest.json').read_text(encoding='utf-8'))
 name = f"{manifest['id']}-{manifest['version']}"
 out = mod.parent / (name + '.zip')
-files = ['main.lua', 'manifest.json', 'README.md', 'CHANGELOG.md', 'mod.card', 'LICENSE']
+files = ['main.lua', 'port.lua', 'manifest.json', 'README.md', 'CHANGELOG.md', 'mod.card', 'LICENSE']
 with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as archive:
     for file in files:
         archive.write(mod / file, 'GSBall/' + file)

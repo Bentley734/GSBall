@@ -21,3 +21,4 @@ if harness:
 lua.globals().MOD_PATH = Path(os.path.relpath(mod, engine)).as_posix()
 lua.globals().CACHE_PATH = cache.as_posix() if cache else None
 lua.execute((mod / 'tests/event.lua').read_text(encoding='utf-8'))
+lua.execute((mod / 'tests/port.lua').read_text(encoding='utf-8'))

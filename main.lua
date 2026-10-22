@@ -2,6 +2,8 @@
 -- $BE3C), rather than a wEventFlags completion bit. Gen1recomp models it
 -- as save.crystal.gsBall == "have"; BattleTowerAction GSBALL reads it.
 return function(mod)
+  local chunk = assert((loadstring or load)(assert(mod:read('port.lua')), '@'..mod.path..'/port.lua'))
+  local bindPort = chunk()(mod)
   local function unlock(save)
     if type(save) ~= "table" or save.version ~= "crystal" then return end
     if save.generation ~= 2 then return end
@@ -21,12 +23,17 @@ return function(mod)
   mod.events:on("game.ready", function(ev)
     local game = ev.game or mod.game
     unlock(game and game.save)
+    bindPort(game)
   end)
-  mod.events:on("save.loaded", function(ev) unlock(ev.save) end)
+  mod.events:on("save.loaded", function(ev)
+    unlock(ev.save)
+    bindPort(mod.game)
+  end)
   -- Covers New Game, map changes and Hoennto campaign arrivals. Resolve
   -- the current owner each time; never retain a previous campaign's save.
   mod.events:on("map.entered", function()
     local game = mod.game
     unlock(game and game.save)
+    bindPort(game)
   end)
 end

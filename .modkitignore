@@ -1,3 +1,4 @@
 tests/event.lua
+tests/port.lua
 tools/test.py
 tools/package.py

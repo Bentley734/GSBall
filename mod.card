@@ -1,11 +1,12 @@
 return {
-  summary = "Restore Crystal's native GS Ball delivery and Celebi quest.",
+  summary = "Post-Elite Four GS Ball and Celebi quest for Gold, Silver and Crystal.",
   author = "Bentley734",
-  tags = { "crystal", "quest", "celebi" },
+  tags = { "gold", "silver", "crystal", "quest", "celebi" },
   differences = {
     changed = { "Enable the native GS Ball delivery byte after a Hall of Fame victory." },
-    added = {},
-    known = { "Kurt's normal story requirements and next-day wait remain." },
+    added = { "Gold/Silver quest adaptation using native maps, sprites, inventory and battles." },
+    known = { "Kurt's normal story requirements and next-day wait remain.",
+      "Gold/Silver use new dialogue and omit Crystal's special arrival animation." },
   },
   credits = {
     { who = "pret", for_ = "Crystal disassembly and event documentation" },
