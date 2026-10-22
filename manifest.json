@@ -1,0 +1,17 @@
+{
+  "id": "crystal_gs_ball",
+  "name": "GS Ball",
+  "version": "1.0.0",
+  "api": 2,
+  "entry": "main.lua",
+  "profile": "content",
+  "category": "QUEST",
+  "games": ["crystal"],
+  "game_version": ">=0.3.54",
+  "priority": 120,
+  "permissions": [],
+  "dependencies": [],
+  "conflicts": [],
+  "github": "Bentley734/GSBall",
+  "description": "After your first Elite Four victory, unlock Crystal's native GS Ball delivery at Goldenrod Pokemon Center and follow Kurt's original quest to Celebi."
+}

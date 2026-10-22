@@ -1,0 +1,15 @@
+return {
+  summary = "Restore Crystal's native GS Ball delivery and Celebi quest.",
+  author = "Bentley734",
+  tags = { "crystal", "quest", "celebi" },
+  differences = {
+    changed = { "Enable the native GS Ball delivery byte after a Hall of Fame victory." },
+    added = {},
+    known = { "Kurt's normal story requirements and next-day wait remain." },
+  },
+  credits = {
+    { who = "pret", for_ = "Crystal disassembly and event documentation" },
+    { who = "gen1recomp contributors", for_ = "Native Crystal script runtime" },
+  },
+  compat = { engine = ">=0.3.54", modApi = 2 },
+}
